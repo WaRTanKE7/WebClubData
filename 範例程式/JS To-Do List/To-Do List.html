@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+        <title>待辦事項</title>
+
+        <style>
+            .main {
+                margin-top: 30px;
+            }
+            .listTitle{
+                margin-top: 60px;
+                text-align: center;
+            }
+            .list {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">待辦清單</a>
+        </nav>
+        <div class="container main">
+            <div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="輸入待辦事項" id="thing" name="thing" value="">
+                    <div class="input-group-append">
+                        <button id="add" class="btn btn-primary">新增</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listTitle">
+                <h2>待辦事項</h2>
+            </div>
+
+            <div class="list card">
+                <ul class="list-group" id="list">
+
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            var input = document.getElementById("thing").value;
+            var list = document.getElementById("list");
+
+            document.getElementById("add").onclick = function () {
+                var li = document.createElement('li');
+                li.setAttribute("class", "list-group-item");
+                text = input;
+                li.innerHTML = text;
+                list.appendChild(li);
+            }
+        </script>
+    </body>
+
+</html>
