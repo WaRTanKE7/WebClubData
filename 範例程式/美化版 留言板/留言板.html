@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="messageBoard.js"></script>
+
+    <title>留言板</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+
+        <div class="row m-4">
+
+            <div class="col-6">
+                <div class="m-auto">
+                    <h1 class="text-center text-primary mb-3">留言板</h1>
+
+                    <div class="mx-3 mb-3" id="errorAlert"></div>
+
+                    <div class="mx-3">
+                        <form id="messageBoard">
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text text-light bg-info">名字：</span>
+                                </div>
+                                <input class="form-control" id="name" type="text" name="name" placeholder="請輸入您的姓名"
+                                    value="">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text text-light bg-info">標題：</span>
+                                </div>
+                                <input class="form-control" id="title" type="text" name="title" placeholder="請輸入您的標題"
+                                    value="">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text text-light bg-info">內容：</span>
+                                </div>
+                                <textarea class="form-control" id="content" name="content" cols="30" rows="5"
+                                    placeholder="請輸入您的內容" id="comment" value=""></textarea>
+                            </div>
+
+                            <button type="button" class="btn btn-primary float-right" id="btn_add">送出</button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="m-auto">
+                    <h1 class="text-center text-primary mb-3">所有留言</h1>
+                    <div class="mx-3" id="allMessage">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
