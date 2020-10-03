@@ -1,4 +1,4 @@
-/* 表格內容垂直置中 */
-.table tbody tr td {
-    vertical-align: middle;
+/* 表格內文字垂直置中 */
+td {
+    vertical-align: middle !important;
 }
