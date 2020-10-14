@@ -1,0 +1,9 @@
+.logo {
+    width: 60px;
+}
+
+/* 表格內文字垂直置中 */
+
+td {
+    vertical-align: middle !important;
+}
