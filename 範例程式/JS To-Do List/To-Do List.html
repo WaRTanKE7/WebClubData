@@ -56,13 +56,13 @@
             var input = document.getElementById("thing");
             var list = document.getElementById("list");
 
-            document.getElementById("add").onclick = function () {
+            document.getElementById("add").addEventListener("click", function () {
                 var li = document.createElement('li');
                 li.setAttribute("class", "list-group-item");
                 text = input.value;
                 li.innerHTML = text;
                 list.appendChild(li);
-            }
+            });
         </script>
     </body>
 
