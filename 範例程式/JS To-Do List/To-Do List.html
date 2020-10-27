@@ -17,10 +17,12 @@
             .main {
                 margin-top: 30px;
             }
-            .listTitle{
+
+            .listTitle {
                 margin-top: 60px;
                 text-align: center;
             }
+
             .list {
                 margin-top: 30px;
             }
@@ -55,12 +57,14 @@
         <script>
             var input = document.getElementById("thing");
             var list = document.getElementById("list");
+            var index = 0;
 
             document.getElementById("add").addEventListener("click", function () {
+                index += 1;
                 var li = document.createElement('li');
                 li.setAttribute("class", "list-group-item");
-                text = input.value;
-                li.innerHTML = text;
+                var text = input.value;
+                li.innerHTML = index + ".  " + text;
                 list.appendChild(li);
             });
         </script>
