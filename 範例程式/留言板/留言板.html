@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <title>留言板</title>
-</head>
+        <title>留言板</title>
+    </head>
 
-<body>
-    <div class="container mt-3">
+    <body>
+        <div class="container mt-5">
 
-        <div class="row">
-            <h1 class="m-auto text-primary">留言板</h1>
-        </div>
+            <div class="mr-5 ml-5 card bg-warning text-primary">
+                <div class="row card-body">
+                    <h1 class="m-auto">留言板</h1>
+                </div>
 
-        <div class="row m-4">
-            <div class="m-auto">
-                <form action="" method="">
+                <div class="row card-body">
+                    <form class="m-auto" action="" method="">
 
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text text-light bg-info">名字：</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-light bg-info">暱稱：</span>
+                                    </div>
+                                    <input class="form-control" id="usr" type="text" name="name" placeholder="請輸入您的暱稱">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-light bg-info">信箱：</span>
+                                    </div>
+                                    <input class="form-control" id="email" type="email" name="email"
+                                        placeholder="請輸入您的信箱">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-light bg-info">標題：</span>
+                                    </div>
+                                    <input class="form-control" type="text" name="title" placeholder="請輸入您的標題">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-light bg-info">內容：</span>
+                                    </div>
+                                    <textarea class="form-control" name="content" cols="30" rows="5"
+                                        placeholder="請輸入您的內容" id="comment"></textarea>
+                                </div>
+
+                                <button type="button" class="btn btn-primary float-right">送出</button>
+                            </div>
                         </div>
-                        <input class="form-control" id="usr" type="text" name="name" placeholder="請輸入您的姓名">
-                    </div>
 
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text text-light bg-info">信箱：</span>
-                        </div>
-                        <input class="form-control" id="email" type="email" name="email" placeholder="請輸入您的信箱">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text text-light bg-info">標題：</span>
-                        </div>
-                        <input class="form-control" type="text" name="title" placeholder="請輸入您的標題">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text text-light bg-info">內容：</span>
-                        </div>
-                        <textarea class="form-control" name="content" cols="30" rows="5" placeholder="請輸入您的內容"
-                            id="comment"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary float-right">送出</button>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
 
-    </div>
-</body>
+        </div>
+    </body>
 
 </html>
